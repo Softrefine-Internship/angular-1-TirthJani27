@@ -1,0 +1,101 @@
+/* General Styles */
+* {
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* User Card styling */
+.info-card {
+  border-radius: 10px;
+  position: relative;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  overflow: hidden;
+  text-align: left;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);  // Slight hover effect for better UI feel
+  }
+
+  img {
+    margin: 10px 0 !important;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    align-self: center;
+  }
+
+  .name {
+    text-align: center;
+    font-size: xx-large;
+    margin: 20px 0;
+  }
+
+  .email {
+    margin: 5px 0;
+    text-align: center;
+    font-size: large;
+  }
+
+  .age,
+  .phone {
+    margin: 10px 20px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 0 !important;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darkgreen;
+    }
+  }
+}
+
+/* Modal (Popup) Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);  // Semi-transparent black background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
