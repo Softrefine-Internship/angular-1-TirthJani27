@@ -1,0 +1,147 @@
+/* General Styles */
+* {
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container for holding user cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #555;
+  position: relative;
+  gap: 30px;
+}
+
+/* Button styles for consistency */
+.btn {
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  padding: 10px 0;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darkgreen;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  padding: 2rem !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); // Semi-transparent background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; // Adding space between elements in the modal
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Input Field Styles */
+input {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #555; // Soft border to make inputs look cleaner
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: #4caf50; // Green border on focus
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #bbb; // Light gray placeholder text
+  }
+
+  // Small screen responsiveness
+  @media (max-width: 500px) {
+    padding: 10px 14px;
+  }
+}
+
+/* Button Styles */
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: green;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: darkgreen;
+    transform: scale(1.05); // Slight zoom effect on hover
+  }
+
+  &:active {
+    background-color: #388e3c; // Darker green on active click
+  }
+}
+
+/* Form Title */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Optional: Labels for better form clarity (if you use labels) */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+/* Adding some margin-bottom to inputs */
+input + input {
+  margin-top: 10px;
+}
